@@ -169,6 +169,13 @@ header {
     justify-content: space-between; /* para que se vayan a los extremos */
     align-items: center;
     padding: 0 1em;
+
+    transition: all 600ms ease-in-out;
+}
+
+header.transparente {
+    background-color: transparent;
+    box-shadow: none;
 }
 
 header img {
@@ -184,9 +191,23 @@ header nav a {
     /* para que la función "hover" sea más agradable */
     transition: all 300ms ease-in-out;
 }
+header.transparente nav a {
+    color: rgba(255, 255, 255, 0.9);
+}
 
 header nav a.activo, /* para los enlaces con "class" de nombre activo */
 header nav a:hover {
     color: #a97c50;
     font-weight: bold; /* el peso de la letra */
+}
+header.transparente nav a.activo, /* para los enlaces con "class" de nombre activo */
+header.transparente nav a:hover {
+    color: white;
+    font-weight: bold; /* el peso de la letra */
+}
+
+
+/* Layout */
+.primera {
+    margin-top: 100vh;
 }
