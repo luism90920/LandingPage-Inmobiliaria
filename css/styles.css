@@ -1,0 +1,192 @@
+/* Fuentes */
+@font-face {
+    font-family: "Avenir";
+    src: url("/fonts/Avenir-Book.ttf");
+}
+
+/* Reseteo */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+    color: inherit; /* toman el color del elemento en el que se encuentra el enlace */
+}
+
+/* Configuraciones Generales */
+html {
+    font-size: 20px;
+}
+
+@media (max-width: 440px) {
+    html {
+        font-size: 18px;
+    }
+}
+
+body {
+    font-family: "Avenir", sans-serif;
+    color: #67666e;
+}
+
+/* Hacemos el img responsive para que se adapte y nunca se desborda de los elementos
+que los contiene */
+img {
+    max-width: 100%;
+}
+
+/* Hero */
+.hero {
+    width: 100%;
+    height: 100vh;
+    background-color: black;
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+}
+
+@keyframes heroAnimation {
+    0% {
+        opacity: 0;
+        animation-timing-function: ease-in;
+    }
+
+    12% { opacity: 1; }
+
+    25% { transform: scale(1.2); }
+
+    75% { 
+        opacity: 0; 
+        transform: scale(1.1);
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+.hero div {
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    /* configuracion general de las imágenes */
+    background-size: cover;
+    background-position: center;
+    background-repeat: none;
+    opacity: 0; /* ocupan el espacio pero no se ven */
+
+    /* Animamos todos los div */
+    /* colocamos el nombre de la animación, el tiempo e 
+    "infinite" para que se repita de manera continua  */
+    animation: heroAnimation 18s infinite;  
+}
+
+.hero div:nth-child(1) {
+    background-image: url("/img/front1.jpg");
+}
+
+.hero div:nth-child(2) {
+    background-image: url("/img/front2.jpg");
+    animation-delay: 6s;
+}
+
+.hero div:nth-child(2) {
+    background-image: url("/img/front3.jpg");
+    animation-delay: 12s;
+}
+
+
+/* Configuración logo */
+.hero .hero-logo {
+    /* se posiciona automaticamente en el punto de inicio de su padre (top-left esquina) */
+    position: absolute; 
+     /* Modificamos esa posición pero sin que deje de ser relativa al padre */
+    top: 50%;
+    left: 50%;
+
+    /* recordemos que "transform" es necesario para que el elemento quede justamente en el centro */
+    transform: translate(-50%, -50%);
+    /* le sacamos los efectos */
+    animation: none;
+    opacity: 1;
+
+    /* definimos tamaño */
+    width: 30%; /* al 30% del ancho del dispositivo */
+    height: auto;
+}
+
+/* Configuracion flechita - Similar a la configuración del logo */
+.hero .hero-down {
+    position: absolute; 
+    top: 90%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: none;
+    opacity: 1;
+    width: 5%; 
+    height: auto;
+}
+
+/* Hacemos unos ajustes para qeu se adapte mejor el logo y la flecha down */
+@media (max-width: 720px) {
+    .hero .hero-logo {
+        width: 60%;
+    }
+    .hero .hero-down {
+        width: 15%;
+    }
+}
+@media (max-width: 400px) {
+    .hero .hero-logo {
+        width: 80%;
+    }
+    .hero .hero-down {
+        width: 20%;
+    }
+}
+
+/* Header */
+header {
+    background-color: white;
+    box-shadow: 1.5px 1.5px 4px #b3b3b3;
+    width: 100%;
+    height: 80px; /* es lo que se le suele dar */
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    /* Posicionamos el "header" al frente de todas las imágenes */
+    z-index: 1;
+
+    display: flex;
+    justify-content: space-between; /* para que se vayan a los extremos */
+    align-items: center;
+    padding: 0 1em;
+}
+
+header img {
+    width: auto;
+    height: 60px; /* le damos un poco menos que la barra, que el header que definimos arriba */
+}
+
+header nav a {
+    color: #67666e;
+    font-weight: normal; /* el peso de la letra */
+    margin-left: 1em;
+
+    /* para que la función "hover" sea más agradable */
+    transition: all 300ms ease-in-out;
+}
+
+header nav a.activo, /* para los enlaces con "class" de nombre activo */
+header nav a:hover {
+    color: #a97c50;
+    font-weight: bold; /* el peso de la letra */
+}
