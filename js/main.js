@@ -11,4 +11,11 @@ $(document).ready(function() {
             $('header').addClass('transparente');
         }
     })
+
+
+    /* Manejo del menú amburguesa */
+    $('#burger').click(function() {
+        $('#burger').toggleClass('abierto');
+        $('.menu').toggleClass('abierto'); // toggleClass hace que si tiene la clase abierto la saque y si no la tiene que la ponga
+    })
 })
