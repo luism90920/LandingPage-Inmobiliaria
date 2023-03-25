@@ -39,6 +39,10 @@ img {
     max-width: 100%;
 }
 
+p {
+    margin-bottom: 0.8rem;
+}
+
 /* Hero */
 .hero {
     width: 100%;
@@ -229,6 +233,10 @@ header.transparente nav a:hover {
     background-color: white;
 }
 
+#burger.solid .barra{
+    background-color: #a97c50;
+}
+
 #burger.abierto .barra.superior {
     transform: translateY(8px) rotateZ(45deg);
 }
@@ -263,13 +271,13 @@ header.transparente nav a:hover {
     position: fixed;
     /* pegado a la ezquina superior izquierda */
     top: 0; 
-    left: -360px;
+    left: -360px; /* posición cuando está cerrado el menú, es para que no se vea */
     padding-top: 40px;
     transition: all 700ms ease-in-out;
 }
 
 .menu.abierto {
-    left: 0;
+    left: 0px; /* posición cuando está abierto, es para que se vea */
 }
 
 .menu nav {
@@ -304,4 +312,283 @@ header.transparente nav a:hover {
 /* Layout */
 .primera {
     margin-top: 100vh;
+}
+
+#pr {
+    display: block;
+    margin-top: -90px;
+    padding: 90px;
+}
+
+.fila {
+    display: flex;
+    padding: 2rem 1rem;
+}
+
+.col-100 {
+    width: 100%;
+    padding: 0.5rem 1rem;
+}
+
+.col-75 {
+    width: 75%;
+    padding: 0.5rem 1rem;
+}
+
+.col-66 {
+    width: 66.66666%;
+    padding: 0.5rem 1rem;
+}
+
+.col-50 {
+    width: 50%;
+    padding: 0.5rem 1rem;
+}
+
+.col-33 {
+    width: 33.33333%;
+    padding: 0.5rem 1rem;
+}
+
+.col-25 {
+    width: 25%;
+    padding: 0.5rem 1rem;
+}
+
+@media (max-width: 720px) {
+    /* se mantiene "display flex" pero pasa a columna con un tamaño menos a 720px */
+    .fila {
+        flex-direction: column; 
+        padding: 1rem 0.5rem;
+    }
+
+    .col-75,
+    .col-66,
+    .col-50,
+    .col-33,
+    .col-25 {
+        width: 100%;
+    }
+}
+
+.flex-start {
+    display: flex;
+    justify-content: flex-start; /* eje x */
+    align-items: center; /* eje y */
+}
+.flex-center {
+    display: flex;
+    justify-content: center; /* eje x */
+    align-items: center; /* eje y */
+}
+.flex-end {
+    display: flex;
+    justify-content: flex-end; /* eje x */
+    align-items: center; /* eje y */
+}
+.flex-between {
+    display: flex;
+    justify-content: space-between; /* eje x */
+    align-items: center; /* eje y */
+}
+.flex-around {
+    display: flex;
+    justify-content: space-around; /* eje x */
+    align-items: center; /* eje y */
+}
+
+.flex-column-center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* eje x */
+    align-items: center; /* eje y  */
+}
+
+
+/* Espaciados y márgenes */
+.m-t { /* margin-top */
+    margin-top: 1rem;
+}
+.m-b { /* margin-botton */
+    margin-bottom: 1rem;
+}
+.m-l { /* margin-left */
+    margin-left: 1rem;
+}
+.m-r { /* margin-right */
+    margin-right: 0.5rem;
+}
+
+.m-t-small { /* margin-top */
+    margin-top: 0.5rem;
+}
+.m-b-small { /* margin-botton */
+    margin-bottom: 0.5rem;
+}
+.m-l-small { /* margin-left */
+    margin-left: 0.5rem;
+}
+.m-r-small { /* margin-right */
+    margin-right: 0.5rem;
+}
+
+
+/* Paralax */
+.fila.paralax {
+    background-image: url("/img/property5.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed; /* con esto dejamos la imágen fija */
+    padding: 3rem 2rem;
+}
+
+.fila.paralax div {
+    background-color: rgba(255, 255, 255, 0.75);
+    padding: 2rem;
+}
+
+.fila.paralax div p {
+    font-size: 1.5rem;
+    color: #a97c50;
+    text-align: center;
+}
+
+
+/* Caja navegación */
+
+.caja-nav img {
+    width: 20%;
+    margin-bottom: 1em;
+}
+
+.caja-nav a {
+    border: 1px solid #a97c50;
+    background-color: white;
+    color: #a97c50;
+    font-size: 1rem;
+    font-weight: normal;
+    padding: 0.5em 1em;
+    border-radius: 0.3em;
+    cursor: pointer;
+    transition: all ease-in-out 400ms;
+}
+
+.caja-nav a:hover {
+    background-color: #a97c50;
+    color: white;
+}
+
+
+
+/* Formulario contacto */
+form.contacto {
+    width: 50%;
+}
+
+@media (max-width: 720px) {
+    form.contacto {
+        width: 75%;
+    }
+}
+@media (max-width: 440px) {
+    form.contacto {
+        width: 100%;
+    }
+}
+
+form.contacto .fila{
+    padding: 0.8rem;
+}
+
+input {
+    border: none;
+    border-bottom: 2px solid #a97c50;
+    font-size: 1rem;
+    padding: 0.5em 1em;
+    width: 100%;
+}
+
+input:focus { /* cuando hacemo foco en el imput */
+    outline: none; /* quitamos las líneas externas */
+    border-bottom: 1.5px solid #643e18; /* la línea de abajo la oscurecemos */
+}
+
+input.usuario {
+    background-image: url("/img/user.svg");
+    background-repeat: no-repeat;
+    background-position: 0 7px;
+    padding-left: 2em;
+}
+input.email {
+    background-image: url("/img/mail-bronce.svg");
+    background-repeat: no-repeat;
+    background-position: 0 7px;
+    padding-left: 2em;
+}
+
+button {
+    border: none;
+    background-color: #a97c50;
+    color: white;
+    font-size: 1rem;
+    font-weight: normal;
+    padding: 0.5em 1em;
+    border-radius: 0.3em;
+    cursor: pointer;
+    transition: all ease-in-out 400ms;
+}
+
+button:hover {
+    background-color: #81501e;
+}
+
+input[type="checkbox"] { /* le quitamos la cajita al checkbox */
+    display: none;
+}
+
+/* usamos el mismo selector que arriba y le sumamos el label::before para justamente
+agregar un icono antes de "label" */
+input[type="checkbox"] + label::before{ 
+    content: url("/img/square.svg");
+    position: relative;
+    top: 5px;
+    padding-right: 5px;
+}
+input[type="checkbox"]:checked + label::before{ /* le sumamos checked para que sepa cuando está activado o no */
+    content: url("/img/check-square.svg");
+}
+
+/* Footer */
+footer {
+    background-color: #424242;
+}
+
+footer p {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+footer p:first-child {
+    color: #a97c50;
+    font-weight: bold;
+}
+
+footer img.rrss {
+    height: 48px;
+}
+
+footer a {
+    font-size: 0.8rem;
+    color: #a97c50;
+    transition: all ease-in-out 400ms;
+}
+footer a:hover {
+    font-size: 0.8rem;
+    color: #704a24
+}
+
+footer .copyright {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 0.8rem;
+    text-align: center;
 }
