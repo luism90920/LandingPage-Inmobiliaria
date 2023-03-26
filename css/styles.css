@@ -592,3 +592,60 @@ footer .copyright {
     font-size: 0.8rem;
     text-align: center;
 }
+
+
+/* Card */
+
+.fila.grid {
+    margin-top: 100px; /* para despegarlo de la barra de navegación */
+    
+    display: grid; /* rompemos el "display:flex" que traía la clase "fila" con "grid" */
+    grid-template-columns: repeat(auto-fit, 360px); /* auto-fit hace que cada columna se adapte  automáticamente al espacio disponible*/
+    grid-gap: 2rem; /* los espacios entre la rejilla */
+    justify-content: center;
+}
+
+.card {
+    width: 360px;
+    border-radius: 0.5rem;
+    box-shadow: 2px 2px 4px grey;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden; /* El contenido es recortado y no se muestran barras de posición */
+}
+
+.card img {
+    height: 320px;
+}
+
+.card .footer-card {
+    padding: 0.8rem;
+    width: 100%;
+    height: 174px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+
+.card .footer-card p {
+    margin-bottom: 0.5rem;
+}
+
+.card .footer-card p:first-child {
+    font-weight: bold;
+}
+
+.card .footer-card a {
+    background-color: #a97c50;
+    color: white;
+    font-size: 0.8rem;
+    border-radius: 0.3em;
+    padding: 0.5em 1em;
+    align-self: center; /* como el padre tiene "lign-items:flex start" debemos usar "align-self" */
+    transition: all 400ms ease-in-out;
+}
+.card .footer-card a:hover {
+    background-color: #664626;
+}
