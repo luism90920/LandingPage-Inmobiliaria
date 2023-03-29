@@ -4,32 +4,23 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inicio</title>
+    <title>Ventas</title>
     <link rel="stylesheet" href="/css/styles.css">
     <script src="/js/jquery-3.6.4.min.js"></script>
     <script src="/js/main.js"></script>
 </head>
 <body>
-    <header class="transparente">
+    <header>
         <img src="/img/logo.svg" alt="Logo Imperial Real State">
         <nav>
-            <a href="#" class="activo">Inicio</a>
-            <a href="ventas.html">Ventas</a>
+            <a href="index.html">Inicio</a>
+            <a href="ventas.html" class="activo">Ventas</a>
             <a href="#">Alquiler</a>
             <a href="contacto.html">Contacto</a>
         </nav>
     </header>
-    <div class="hero">
-        <div></div>
-        <div></div>
-        <div></div>
-        <div class="hero-logo">
-            <img src="/img/logo-frame.svg" alt="Logo Imperial Real State">
-        </div>
-        <a href="#pr" class="hero-down"> <!-- el "href" me lleva al elemento con id "pr" -->
-            <img src="/img/down.svg" alt="">
-        </a>
-    </div>
+    
+    
     <div id="burger" class="solid">
         <div class="barra superior"></div>
         <div class="barra media"></div>
@@ -38,9 +29,9 @@
     <div class="menu">
         <nav>
             <br>
-            <a href="#">Inicio</a>
+            <a href="index.html">Inicio</a>
             <hr>
-            <a href="ventas.html">Venta</a>
+            <a href="ventas.html">Ventas</a>
             <hr>
             <a href="#">Alquiler</a>
             <hr>
@@ -48,59 +39,50 @@
         </nav>
         <p class="copyright">&copy; ACME Inc</p>
     </div>
-    <div class="fila primera">
-        <span id="pr">&nbsp;</span>
-        <div class="col-66">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni, odit exercitationem, nesciunt ex quae voluptate quidem cum dolores ea unde similique nobis, animi voluptatum tempora!</p>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deleniti, cumque. Eum praesentium suscipit obcaecati dignissimos.</p>
-        </div>    
-        <div class="col-33">
-            <img src="/img/thumb4.jpg" alt="imagen casa">
+    <div class="fila propiedad">
+        <div class="col-50">
+            <h1 class="m-b">Villa en Oeste</h1>
+            <p class="flex-start"> <!-- con "flex-start" alineo icoco -->
+                <img class="m-r-small" src="/img/blueprint.svg" alt="Icono de plano">
+                950 m2 habitables
+            </p>
+            <p class="flex-start">
+                <img class="m-r-small" src="/img/bed.svg" alt="Icono n° de dormitorios">
+                7 dormitorios
+            </p>
+            <p class="flex-start">
+                <img class="m-r-small" src="/img/bath.svg" alt="Icono n° de bañoz">
+                9 baños
+            </p>
+            <p class="flex-start">
+                <img class="m-r-small" src="/img/tree.svg" alt="Icono de Jardin">
+                Jardin de 2500 m2
+            </p>
+            <p class="flex-start">
+                <img class="m-r-small" src="/img/money.svg" alt="Icono de monedas">
+                $10.000.000
+            </p>
+            <p class="flex-start">
+                <img class="m-r-small" src="/img/contract.svg" alt="Icono de contrato">
+                Entrega inmediata
+            </p>
+        </div>
+        <div class="col-50"></div>
+    </div>
+    <div class="fila">
+        <div class="col-50">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum aspernatur possimus sapiente at iusto corporis provident laudantium, soluta amet, dolores modi esse a minus magni deleniti ex aliquid! Ducimus fugit dolor exercitationem quaerat officia pariatur architecto distinctio, repellat rem incidunt, omnis dolorem minima beatae eaque delectus reiciendis ullam. Tempore ullam quasi ducimus suscipit accusantium animi soluta nemo dicta excepturi blanditiis.</p>
+        </div>
+        <div class="col-50">
+            <img src="/img/property2.jpg" alt="">
         </div>
     </div>
     <div class="fila">
         <div class="col-50">
-            <img src="/img/thumb5.jpg" alt="">
+            <img src="/img/property3.jpg" alt="">
         </div>
         <div class="col-50">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem ut quaerat repudiandae iusto rerum dignissimos in voluptatem explicabo aliquam natus, libero vero facere nostrum eius nulla unde odio nemo deserunt quibusdam maxime, earum perspiciatis! Asperiores.</p>
-        </div>
-    </div>
-    <div class="fila paralax">
-        <div class="col-100">
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laboriosam, fuga.</p>
-        </div>
-    </div>
-    <div class="fila">
-        <div class="col-50 caja-nav flex-column-center">
-            <img src="/img/comprar.svg" alt="">
-            <a href="ventas.html">VENTA</a>
-        </div>
-        <div class="col-50 caja-nav flex-column-center">
-            <img src="/img/alquilar.svg" alt="">
-            <a href="#">ALQUILER</a>
-        </div>
-    </div>
-    <div class="fila">
-        <div class="col-100 flex-column-center">
-            <p>Suscribete/Solicita información</p>
-            <form class="contacto">
-                <div class="fila">
-                    <input class="usuario" type="text" placeholder="Nombre y apellido">
-                </div>
-                <div class="fila">
-                    <input class="email" type="email" placeholder="Correo electrónico">
-                </div>
-                <div class="fila flex-end">
-                    <button type="submit">Enviar</button>
-                </div>
-                <div class="fila flex-center">
-                    <input type="checkbox" id="condiciones">
-                    <label for="condiciones">
-                        Acepto las condiciones legales.
-                    </label>
-                </div>
-            </form>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum aspernatur possimus sapiente at iusto corporis provident laudantium, soluta amet, dolores modi esse a minus magni deleniti ex aliquid! Ducimus fugit dolor exercitationem quaerat officia pariatur architecto distinctio, repellat rem incidunt, omnis dolorem minima beatae eaque delectus reiciendis ullam. Tempore ullam quasi ducimus suscipit accusantium animi soluta nemo dicta excepturi blanditiis.</p>
         </div>
     </div>
     <footer class="fila">
